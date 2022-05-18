@@ -7,29 +7,41 @@ import { v4 as uuid } from "uuid";
 
 export const quizzes = [
   {
-    _id: "3fe39675-140b-4075-82f3-949a4dc95d18",
+    _id: uuid(),
     title: "You Can WIN",
-    totalScore: 20,
+    totalScore: 0,
     mcqs: [
       {
-        _id: "dddcd7a2-a479-482e-ae82-d55e2468534d",
-        question: "Which season Harvey is the Most Badass One",
-        options: ["Season 1", "Season 2", "Season 6", "Every Season"],
-        answer: "Every Season",
+        _id: uuid(),
+        question: "Who is the only Agent who has a flash that is completely effective even if you look away?",
+        options: ["Phoenix", "Omen", "Reyna", "Breach"],
+        answer: "Omen",
       },
       {
-        _id: "93664683-d515-44bf-80c4-cd52c279aeb6",
-        question: "In which season does Mike was imprisoned",
-        options: ["Season 3", "Season 5", "Season 7", "Season 4"],
-        answer: "Season 4",
+        _id: uuid(),
+        question: "How many Agents in Valorant have the ability to smoke areas?",
+        options: ["3", "6", "4", "2"],
+        answer: "4",
       },
       {
-        _id: "7e70f8e5-0760-4b5e-b833-38dab109ec54",
-        question: "Harvey had what kind of emotional problems",
-        options: ["Attachment Issues", "Panic Attack", "Trauma", "Stress"],
-        answer: "Attachment Issues",
+        _id: uuid(),
+        question: "Who Made Valorant?",
+        options: ["Riot Games", "Epic Games", "RockStar Games", "Ubisoft"],
+        answer: "Riot Games",
       },
+      {
+        _id: uuid(),
+        question: "Is Valorant FREE",
+        options: ["Yes", "No"],
+        answer: "Yes",
+      }, {
+        _id: uuid(),
+        question: "How many Agents in the game have the ability to use utility to scout enemy positions without taking any damage?",
+        options: ["2", "4", "3", "1"],
+        answer: "4",
+      },
+
     ],
-    catergoryName: "TV Show",
+    catergoryName: "Valorant",
   },
 ];

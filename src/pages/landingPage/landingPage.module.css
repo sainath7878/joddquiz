@@ -1,0 +1,48 @@
+.heroSection {
+  background-image: url("https://res.cloudinary.com/duy47nrum/image/upload/v1652805378/joddquiz/astra_chvikw.png");
+  height: 55rem;
+  background-position: top center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 5rem;
+}
+
+.bannerText {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-end;
+  width: 50%;
+}
+
+.bannerText > a {
+  align-self: center;
+  max-width: none;
+}
+
+.bannerText > a > button {
+  width: 20rem;
+  max-width: none;
+}
+
+.bannerText > h1 {
+  font-family: monospace;
+  color: var(--COLOR-PRIMARY);
+  font-size: 4rem;
+}
+
+.titleUnderline {
+  background-color: var(--SECONDARY-COLOR);
+  width: 15rem;
+  height: 4px;
+  margin: 1rem auto;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 2rem 5rem;
+}
