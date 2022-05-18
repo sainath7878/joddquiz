@@ -3,6 +3,7 @@
   --Z-INDEX-20: 20;
   --COLOR-PRIMARY: #fafafa;
   --COLOR-PRIMARY-ALTERNATIVE: #171717;
+  --COLOR-BACKGROUND-OVERLAY: rgb(0 0 0 / 50%);
 }
 
 a {
