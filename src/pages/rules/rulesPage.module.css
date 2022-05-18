@@ -1,0 +1,30 @@
+.icon {
+  font-size: 2rem;
+  color: var(--SECONDARY-COLOR);
+  margin-right: 2rem;
+}
+
+.rulesContainer {
+  margin: 4rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rulesList {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  list-style: none;
+  margin: 3rem 0;
+}
+
+.listItem {
+  font-size: 2.5rem;
+}
+
+.rulesContainer > button{
+    max-width: none;
+    width: 20rem;
+}

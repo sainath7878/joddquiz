@@ -6,7 +6,7 @@ import FadeLoader from "react-spinners/FadeLoader";
 import { useAuth } from "context/authContext";
 
 function LandingPage() {
-  const { categories } = useFetch("/api/categories");
+  const { quizes } = useFetch("/api/quizzes");
   const {
     authState: { loading },
   } = useAuth();
@@ -37,10 +37,10 @@ function LandingPage() {
             radius={5}
           />
         </div>
-        {categories && (
+        {quizes && (
           <div className={styles.categories}>
-            {categories.length > 0 &&
-              categories.map((category) => (
+            {quizes.length > 0 &&
+              quizes.map((category) => (
                 <CategoryCard category={category} key={category._id} />
               ))}
           </div>
