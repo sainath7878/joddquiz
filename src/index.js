@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { makeServer } from "./server";
 import { BrowserRouter as Router } from "react-router-dom"
 import { AuthProvider } from 'context/authContext';
+import { QuizProvider } from 'context';
 
 
 // Call make Server
@@ -16,7 +17,9 @@ root.render(
   <React.StrictMode>
     <Router>
       <AuthProvider>
-        <App />
+        <QuizProvider>
+          <App />
+        </QuizProvider>
       </AuthProvider>
     </Router>
   </React.StrictMode>

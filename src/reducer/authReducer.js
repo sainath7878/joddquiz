@@ -14,4 +14,4 @@ const authReducer = (authState, { type, payload }) => {
     }
 }
 
-export { initialAuthState, authReducer }
+export { initialAuthState, authReducer };
