@@ -1,6 +1,7 @@
 import styles from "./rulesPage.module.css";
 import { v4 as uuid } from "uuid";
 import { FaHandPointRight } from "react-icons/fa";
+import { Link, useParams } from "react-router-dom";
 
 function RulesPage() {
   const rulesData = [
@@ -9,6 +10,9 @@ function RulesPage() {
     { _id: uuid(), rule: "Each correct answer scores 10 Points" },
     { _id: uuid(), rule: "Score more than 70% to receive a gift!" },
   ];
+
+  const { quizid } = useParams();
+
   return (
     <div className={styles.rulesContainer}>
       <h1 className="fs-xl text-align-center">Rules to Follow</h1>
@@ -22,7 +26,9 @@ function RulesPage() {
           );
         })}
       </ul>
-      <button className="btn btn-secondary fs-m">Play Now</button>
+      <Link to={`/questions/${quizid}/${0}`}>
+        <button className="btn btn-secondary fs-m">Play Now</button>
+      </Link>
     </div>
   );
 }

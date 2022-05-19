@@ -2,7 +2,7 @@ import { CategoryCard } from "components";
 import { useFetch } from "hooks/useFetch";
 import styles from "./landingPage.module.css";
 import { css } from "@emotion/react";
-import FadeLoader from "react-spinners/FadeLoader";
+import BeatLoader from "react-spinners/BeatLoader";
 import { useAuth } from "context/authContext";
 
 function LandingPage() {
@@ -27,7 +27,7 @@ function LandingPage() {
         <div className={styles.titleUnderline}></div>
 
         <div className="loader">
-          <FadeLoader
+          <BeatLoader
             color="#a40ae0"
             loading={loading}
             css={css}

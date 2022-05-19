@@ -1,7 +1,7 @@
 import "./App.css";
 import Mockman from "mockman-js";
 import { Routes, Route } from "react-router-dom";
-import { LandingPage, PrivateRoute, RestrictAuth, RulesPage } from "pages/index";
+import { LandingPage, PrivateRoute, Quiz, RestrictAuth, RulesPage, ResultPage } from "pages/index";
 import { Footer, Header, SignIn, SignUp } from "components";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -10,7 +10,7 @@ import { useAuth } from "context";
 
 function App() {
   const token = localStorage.getItem("token");
-  const {authDispatch} = useAuth();
+  const { authDispatch } = useAuth();
   useEffect(() => {
     if (token) {
       authDispatch({ type: "SET_USER", payload: { encodedToken: token } })
@@ -28,6 +28,12 @@ function App() {
             <Route path="/rules" >
               <Route path=":quizid" element={<RulesPage />} />
             </Route>
+            <Route path="/questions">
+              <Route path=":quizid" >
+                <Route path=":questionNumber" element={<Quiz />} />
+              </Route>
+            </Route>
+            <Route path="/result" element={<ResultPage />} />
           </Route>
 
           <Route element={<RestrictAuth />} >

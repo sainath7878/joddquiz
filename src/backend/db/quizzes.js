@@ -9,7 +9,7 @@ export const quizzes = [
   {
     _id: uuid(),
     title: "Valorant Quiz",
-    totalScore: 0,
+    totalScore: 50,
     imgSrc: "https://res.cloudinary.com/duy47nrum/image/upload/v1652807954/joddquiz/valorant_vdfsjl.jpg",
     categoryName: "Valorant",
     mcqs: [
@@ -48,7 +48,7 @@ export const quizzes = [
   {
     _id: uuid(),
     title: "GTA V Quiz",
-    totalScore: 0,
+    totalScore: 50,
     imgSrc: "https://res.cloudinary.com/duy47nrum/image/upload/v1652808012/joddquiz/GTA-V_ltuquc.webp",
     categoryName: "GTA V",
     mcqs: [
@@ -87,7 +87,7 @@ export const quizzes = [
   {
     _id: uuid(),
     title: "CS GO Quiz",
-    totalScore: 0,
+    totalScore: 50,
     imgSrc: "https://res.cloudinary.com/duy47nrum/image/upload/v1652807838/joddquiz/csgo.png_ucwyth.png",
     categoryName: "CS GO",
     mcqs: [
@@ -126,7 +126,7 @@ export const quizzes = [
   {
     _id: uuid(),
     title: "Fortnite Quiz",
-    totalScore: 0,
+    totalScore: 50,
     imgSrc: "https://res.cloudinary.com/duy47nrum/image/upload/v1652807739/joddquiz/fortnite_xsu0zk.jpg",
     categoryName: "Fortnite",
     mcqs: [

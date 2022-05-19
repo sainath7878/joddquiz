@@ -9,3 +9,11 @@
 a {
   color: var(--COLOR-PRIMARY-ALTERNATIVE);
 }
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
