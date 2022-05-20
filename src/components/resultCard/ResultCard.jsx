@@ -8,21 +8,12 @@ function ResultCard({ questionObj, questionNumber }) {
     quizState: { questionAnswers },
   } = useQuiz();
 
-  console.log(options, questionNumber);
-
   return (
     <>
       <div className={styles.cardContainer}>
         <h1 className="fs-m">{question}</h1>
         <ul className={styles.list}>
           {options.map((option) => {
-            console.log(
-              option,
-              answer,
-              questionNumber,
-              questionAnswers,
-              questionAnswers[questionNumber]
-            );
             return (
               <li
                 key={option}
