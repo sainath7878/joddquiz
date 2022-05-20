@@ -50,6 +50,10 @@
   font-size: 1.5rem;
 }
 
+.nav-section {
+  display: inline-block;
+}
+
 @media only screen and (max-width: 768px) {
   .nav-section > * {
     margin-right: 5px;
