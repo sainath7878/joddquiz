@@ -13,6 +13,8 @@ const quizReducer = (authState, { type, payload }) => {
         case "SET_QUESTION_ANSWERS":
             const { questionNumber, value } = payload
             return { ...authState, questionAnswers: { ...authState.questionAnswers, [questionNumber]: value } }
+        case "RESET":
+            return { ...authState, quiz: {}, score: 0, questionAnswers: {} }
         default:
             throw new Error("Undefined Action");
     }

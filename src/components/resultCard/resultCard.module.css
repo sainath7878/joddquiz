@@ -15,7 +15,7 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .listItem {
@@ -28,21 +28,16 @@
   transition: 0.3s ease-in-out;
 }
 
-.optionLabel {
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
+.correct {
+  background-color: var(--COLOR-SUCCESS);
+  color: var(--COLOR-PRIMARY);
+  border: 1px solid var(--COLOR-SUCCESS);
 }
 
-.listItem:hover {
-  background-color: var(--SECONDARY-COLOR);
+.incorrect {
+  background-color: var(--COLOR-INCORRECT);
   color: var(--COLOR-PRIMARY);
-  cursor: pointer;
-}
-
-.selected {
-  background-color: var(--SECONDARY-COLOR);
-  color: var(--COLOR-PRIMARY);
+  border: 1px solid var(--COLOR-INCORRECT);
 }
 
 .questionNumber {

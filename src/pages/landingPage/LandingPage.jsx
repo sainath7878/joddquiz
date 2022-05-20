@@ -3,13 +3,21 @@ import { useFetch } from "hooks/useFetch";
 import styles from "./landingPage.module.css";
 import { css } from "@emotion/react";
 import BeatLoader from "react-spinners/BeatLoader";
-import { useAuth } from "context/authContext";
+import { useAuth, useQuiz } from "context";
+import { useEffect } from "react";
 
 function LandingPage() {
   const { quizes } = useFetch("/api/quizzes");
   const {
     authState: { loading },
   } = useAuth();
+
+  const { quizDispatch } = useQuiz();
+
+  //resetting the quiz questions and answers to initial state
+  useEffect(() => {
+    quizDispatch({ type: "RESET" });
+  }, []);
 
   return (
     <>

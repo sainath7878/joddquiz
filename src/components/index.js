@@ -4,3 +4,4 @@ export { CategoryCard } from "components/categoryCard/CategoryCard";
 export { SignIn } from "components/signIn/SignIn";
 export { SignUp } from "components/signUp/SignUp";
 export { QuestionCard } from "components/questionCard/QuestionCard";
+export { ResultCard } from "components/resultCard/ResultCard"

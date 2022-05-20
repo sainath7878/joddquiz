@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./header.css";
-import { BiList, BiPersonCircle } from "assets/icons/Icons.jsx";
+import { BiPersonCircle } from "assets/icons/Icons.jsx";
 import { IcBaselineLogout } from "assets/icons/Icons";
 import { useAuth } from "context";
+import { BiHouseDoorFill } from "assets/icons/Icons";
 
 function Header() {
   const {
@@ -14,9 +15,6 @@ function Header() {
     <header className="header">
       <nav className="navigation d-flex">
         <div className="nav-section d-flex align-center">
-          <button className="btn btn-secondary d-none mobile-view hamburger">
-            <BiList className="fs-m" />
-          </button>
           <Link to="/">
             <p className="nav-brand-link mr-sm">
               {" "}
@@ -26,6 +24,11 @@ function Header() {
         </div>
 
         <div className="nav-section login">
+          <Link to="/">
+            {encodedToken && (
+              <BiHouseDoorFill className="fs-ml mr-sm nav-link" />
+            )}
+          </Link>
           {encodedToken ? (
             <Link to="/">
               <IcBaselineLogout
