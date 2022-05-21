@@ -31,7 +31,7 @@
 
 ---
 
-## About JODDTube
+## About JODDQuiz
 
 JODDQuiz is a quiz application where you can play quiz for the available categories. JODDQuiz is publicly hosted on vercel at [https://joddquiz.vercel.app/](https://joddquiz.vercel.app/)
 
