@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useReducer, createContext, useContext } from "react";
 import { quizReducer, initialQuizState } from "reducer"
 
@@ -8,7 +7,7 @@ function QuizProvider({ children }) {
     const [quizState, quizDispatch] = useReducer(quizReducer, initialQuizState);
 
     return (
-        <QuizContext.Provider value={{ quizState, quizDispatch}}>
+        <QuizContext.Provider value={{ quizState, quizDispatch }}>
             {children}
         </QuizContext.Provider>
     )

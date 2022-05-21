@@ -2,6 +2,7 @@ import styles from "./rulesPage.module.css";
 import { v4 as uuid } from "uuid";
 import { FaHandPointRight } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
+import { useDocumentTitle } from "hooks";
 
 function RulesPage() {
   const rulesData = [
@@ -12,6 +13,7 @@ function RulesPage() {
   ];
 
   const { quizid } = useParams();
+  useDocumentTitle("Rules");
 
   return (
     <div className={styles.rulesContainer}>

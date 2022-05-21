@@ -1,16 +1,19 @@
 import { CategoryCard } from "components";
-import { useFetch } from "hooks/useFetch";
 import styles from "./landingPage.module.css";
 import { css } from "@emotion/react";
 import BeatLoader from "react-spinners/BeatLoader";
 import { useAuth, useQuiz } from "context";
 import { useEffect } from "react";
+import { useDocumentTitle, useFetch, useScrollToTop } from "hooks";
 
 function LandingPage() {
   const { quizes } = useFetch("/api/quizzes");
   const {
     authState: { loading },
   } = useAuth();
+
+  useDocumentTitle("Home");
+  useScrollToTop();
 
   const { quizDispatch } = useQuiz();
 

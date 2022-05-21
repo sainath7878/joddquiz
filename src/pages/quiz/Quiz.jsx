@@ -1,4 +1,3 @@
-import { useFetch } from "hooks/useFetch";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import styles from "./quiz.module.css";
@@ -6,9 +5,12 @@ import { useQuiz, useAuth } from "context";
 import { css } from "@emotion/react";
 import BeatLoader from "react-spinners/BeatLoader";
 import { QuestionCard } from "components";
+import { useDocumentTitle, useFetch, useScrollToTop } from "hooks";
 
 function Quiz() {
   const { quizid, questionNumber } = useParams();
+  useDocumentTitle("Quiz");
+  useScrollToTop();
 
   const { quiz: quizDataFromApi } = useFetch(`/api/quizzes/${quizid}`);
   const {
@@ -39,7 +41,10 @@ function Quiz() {
       {quiz && quiz?.mcqs?.length > 0 && (
         <>
           <h1 className="fs-xl text-align-center mb-sm">{quiz.title}</h1>
-          <QuestionCard questionObj={quiz.mcqs[questionNumber]} noOfQuestions={quiz.mcqs.length} />
+          <QuestionCard
+            questionObj={quiz.mcqs[questionNumber]}
+            noOfQuestions={quiz.mcqs.length}
+          />
         </>
       )}
     </div>
