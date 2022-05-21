@@ -7,8 +7,11 @@ import {
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useAuth } from "context";
+import { useDocumentTitle } from "hooks";
 
 function SignUp() {
+  useDocumentTitle("SignUp");
+
   const [signUpDetails, setSignUpDetails] = useState({
     fullName: "",
     email: "",

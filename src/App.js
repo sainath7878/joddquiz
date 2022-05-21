@@ -1,7 +1,7 @@
 import "./App.css";
 import Mockman from "mockman-js";
 import { Routes, Route } from "react-router-dom";
-import { LandingPage, PrivateRoute, Quiz, RestrictAuth, RulesPage, ResultPage } from "pages/index";
+import { LandingPage, PrivateRoute, Quiz, RestrictAuth, RulesPage, ResultPage, NotFound } from "pages/index";
 import { Footer, Header, SignIn, SignUp } from "components";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -40,6 +40,7 @@ function App() {
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
           </Route>
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
       <Footer />
